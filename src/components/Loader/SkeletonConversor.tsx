@@ -9,14 +9,14 @@ const SkeletonConversor: React.FC<SkeletonConversorProps> = () => {
     <div className="animate-pulse">
       {/* Switch Compra/Venta */}
       <div className="bg-indigo-100 p-1 rounded-2xl flex mb-8 mt-4">
-        <div className="w-1/2 h-10 bg-white rounded-xl"></div>
-        <div className="w-1/2 h-10 rounded-xl ml-1"></div>
+        <div className="w-1/2 h-13 bg-white rounded-xl"></div>
+        <div className="w-1/2 h-13 rounded-xl ml-1"></div>
       </div>
 
       {/* Inputs y switch */}
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-1.5">
         {/* Input Envia */}
-        <div className="h-14 bg-gray-200 rounded-xl"></div>
+        <div className="h-18 bg-gray-200 rounded-xl"></div>
 
         {/* Switch botón */}
         <div className="flex items-center justify-center relative">
@@ -24,7 +24,7 @@ const SkeletonConversor: React.FC<SkeletonConversorProps> = () => {
         </div>
 
         {/* Input Recibe */}
-        <div className="h-14 bg-gray-200 rounded-xl"></div>
+        <div className="h-18 bg-gray-200 rounded-xl"></div>
       </div>
 
       {/* Botón principal */}

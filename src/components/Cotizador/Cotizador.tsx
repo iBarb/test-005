@@ -9,7 +9,7 @@ const Cotizador: React.FC = () => {
   const { purchase_price, sale_price, loading } = useAppSelector(
     (state) => state.rates
   );
-  const [monto, setMonto] = useState<number>(1);
+  const [monto, setMonto] = useState<number>(100);
   const [resultado, setResultado] = useState<number>(1);
   const [esSolesADolares, setEsSolesADolares] = useState<boolean>(false);
 
@@ -18,7 +18,6 @@ const Cotizador: React.FC = () => {
     const nuevoResultado = esSolesADolares
       ? calcularDolaresRecibidos(monto, sale_price)
       : calcularSolesRecibidos(monto, purchase_price);
-    console.log("useEffect) nuevoResultado: ", nuevoResultado);
     setResultado(nuevoResultado);
 
   }, [monto, loading, esSolesADolares]);
@@ -27,7 +26,6 @@ const Cotizador: React.FC = () => {
     const nuevoMonto = esSolesADolares
       ? calcularSolesNecesarios(value, sale_price)
       : calcularDolaresNecesarios(value, purchase_price);
-    console.log("onChangeResult) nuevoMonto: ", nuevoMonto);
 
     setMonto(nuevoMonto);
   }
@@ -43,15 +41,24 @@ const Cotizador: React.FC = () => {
         <SkeletonConversor />
       ) : (
         <>
-          <div className="bg-indigo-100 p-1 rounded-2xl flex mb-8 mt-4 cursor-pointer">
+          <div className="bg-indigo-100 p-1 rounded-2xl flex mb-8 mt-4 cursor-pointer relative">
+            {/* Indicador animado */}
             <div
-              className={`w-1/2 text-center p-3 rounded-xl ${esSolesADolares ? "" : "bg-white"}`}
+              className={`absolute top-1 bottom-1 w-1/2 bg-white rounded-xl transition-all duration-300 ease-in-out ${esSolesADolares ? "left-1/2" : "left-1"
+                }`}
+            ></div>
+
+            {/* Botón Compra */}
+            <div
+              className="w-1/2 text-center p-3 rounded-xl relative z-10"
               onClick={() => setEsSolesADolares(false)}
             >
-              Compra: S/{purchase_price
-              }</div>
+              Compra: S/ {purchase_price}
+            </div>
+
+            {/* Botón Venta */}
             <div
-              className={`w-1/2 text-center p-3 rounded-xl ${!esSolesADolares ? "" : "bg-white"}`}
+              className="w-1/2 text-center p-3 rounded-xl relative z-10"
               onClick={() => setEsSolesADolares(true)}
             >
               Venta: S/ {sale_price}
