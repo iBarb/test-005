@@ -18,6 +18,7 @@ VITE_MESSAGINGSENDERID
 VITE_APPID
 
 ## 📝 Estructura de directorios
+```
 src/
  ┣ api/               # Llamadas a APIs externas
  ┃ ┗ ratesApi.ts
