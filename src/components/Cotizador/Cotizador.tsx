@@ -44,8 +44,7 @@ const Cotizador: React.FC = () => {
           <div className="bg-indigo-100 p-1 rounded-2xl flex mb-8 mt-4 cursor-pointer relative">
             {/* Indicador animado */}
             <div
-              className={`absolute top-1 bottom-1 w-1/2 bg-white rounded-xl transition-all duration-300 ease-in-out ${esSolesADolares ? "left-1/2" : "left-1"
-                }`}
+              className={`absolute top-1 bottom-1 w-1/2 bg-white rounded-xl transition-all duration-300 ease-in-out ${esSolesADolares ? "left-[calc(98%/2)]" : "left-1"}`}
             ></div>
 
             {/* Botón Compra */}
