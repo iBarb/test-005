@@ -1,69 +1,52 @@
-# React + TypeScript + Vite
+# 📊 PRUEBA_TECNICA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación desarrollada con **React + TypeScript + Vite**, diseñada para realizar cotizaciones y operaciones de tipo de cambio.  
 
-Currently, two official plugins are available:
+## 🚀 Instalación y ejecución
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+npm install
 
-## Expanding the ESLint configuration
+npm run dev
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📝 Variables de entorno
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+VITE_APIKEY
+VITE_AUTHDOMAIN
+VITE_PROJECTID
+VITE_STORAGEBUCKET
+VITE_MESSAGINGSENDERID
+VITE_APPID
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 📝 Estructura de directorios
+src/
+ ┣ api/               # Llamadas a APIs externas
+ ┃ ┗ ratesApi.ts
+ ┣ app/               # Configuración de store y hooks globales
+ ┃ ┣ hooks.ts
+ ┃ ┗ store.ts
+ ┣ components/        # Componentes reutilizables
+ ┃ ┗ Cotizador/
+ ┃    ┣ Cotizador.tsx
+ ┃    ┗ CurrencyInput.tsx
+ ┣ features/          # Estado y lógica
+ ┃ ┗ rates/
+ ┃    ┣ ratesSlice.ts
+ ┃    ┣ types.ts
+ ┃    ┗ useRates.ts
+ ┣ pages/             # Páginas principales
+ ┃ ┗ Exchange.tsx
+ ┣ services/          # Servicios de negocio
+ ┃ ┗ ratesService.ts
+ ┣ utils/             # Utilidades y helpers
+ ┃ ┗ formatCurrency.ts
+ ┣ App.tsx            # Componente raíz
+ ┣ main.tsx           # Punto de entrada
+ ┣ firebaseConfig.ts  # Configuración de Firebase
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📝 Tecnologías
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **React**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS**
+- **Firebase** 
