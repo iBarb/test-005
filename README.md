@@ -42,6 +42,7 @@ src/
  ┣ App.tsx            # Componente raíz
  ┣ main.tsx           # Punto de entrada
  ┣ firebaseConfig.ts  # Configuración de Firebase
+ ```
 
 ## 📝 Tecnologías
 
