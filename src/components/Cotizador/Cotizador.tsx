@@ -49,7 +49,7 @@ const Cotizador: React.FC = () => {
 
             {/* Botón Compra */}
             <div
-              className="w-1/2 text-center p-3 rounded-xl relative z-10"
+              className="w-1/2 flex justify-center items-center text-center p-3 rounded-xl relative z-10 text-nowrap px-0 text-[.8rem] sm:text-sm md:text-base"
               onClick={() => setEsSolesADolares(false)}
             >
               Compra: S/ {purchase_price}
@@ -57,7 +57,7 @@ const Cotizador: React.FC = () => {
 
             {/* Botón Venta */}
             <div
-              className="w-1/2 text-center p-3 rounded-xl relative z-10"
+              className="w-1/2 flex justify-center items-center text-center p-3 rounded-xl relative z-10 text-nowrap px-0 text-[.8rem] sm:text-sm md:text-base"
               onClick={() => setEsSolesADolares(true)}
             >
               Venta: S/ {sale_price}
