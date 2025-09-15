@@ -13,5 +13,5 @@ export const useRates = () => {
     );
 
     return () => unsubscribe();
-  }, [dispatch]);
+  }, []);
 };
