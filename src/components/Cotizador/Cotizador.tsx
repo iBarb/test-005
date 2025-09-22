@@ -74,7 +74,7 @@ const Cotizador: React.FC = () => {
 
             <div className="flex items-center justify-center relative">
               <button
-                className="flex items-center p-2 bg-indigo-800 text-white rounded-full absolute cursor-pointer" 
+                className="flex items-center p-2 bg-indigo-800 text-white rounded-full absolute cursor-pointer"
                 onClick={handleSwitch}
                 aria-label="Cambiar entre soles y dólares"
               >
