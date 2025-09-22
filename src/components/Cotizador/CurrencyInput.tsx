@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 import { currencyFlag, currencyPrefix, formatearMoneda, type Currency } from '../../services/ratesService';
-import { formatearNumero } from '../../utils/ormatCurrency';
+import { formatearNumero } from '../../utils/FormatCurrency';
 
 interface CurrencyInputProps {
     currency: Currency;
