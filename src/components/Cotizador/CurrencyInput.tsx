@@ -101,7 +101,7 @@ const CurrencyInput: React.FC<CurrencyInputProps> = ({ currency, label, value, o
                         value={formatearNumero(tempValue)}
                         // value={tempValue}
                         onChange={(e) => handleChange(e.target.value)}
-                        className="outline-none w-24 text-right"
+                        className="outline-none w-full text-right"
                     />
                 ) : (
                     <>
